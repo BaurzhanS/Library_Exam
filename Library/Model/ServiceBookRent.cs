@@ -19,7 +19,7 @@ namespace Library
                     rent.BookStatus = Status.rented;
                     rents.Insert(rent);
                 }
-                message = string.Format("Зарегистрирована выдыча книги {0}, читателю {1}", rent.Book.Name, rent.Book.Name);
+                message = string.Format("Зарегистрирована выдача книги {0}, читателю {1}", rent.Book.Name, rent.Book.Name);
                 return true;
             }
             catch (Exception ex)
