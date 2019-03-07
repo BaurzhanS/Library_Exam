@@ -219,7 +219,7 @@ namespace WebLibrary
             {
                 Console.Clear();
                 Console.WriteLine("Администратор:");
-                Console.WriteLine("---------------------------------------------\n");
+                Console.WriteLine();
                 Console.WriteLine("1. Заблокировать читателя");
                 Console.WriteLine("2. Вывести все книги на руках у читателей");
                 Console.WriteLine("3. Вывести все книги возвращенные пользователем");
@@ -229,7 +229,10 @@ namespace WebLibrary
                 int ch = Int32.Parse(Console.ReadLine());
                 if (ch == 1)
                 {
-
+                    Console.WriteLine("Введите номер читателя: ");
+                    int readerId = int.Parse(Console.ReadLine());
+                    string message = "";
+                    Reader=serviceReader.FindReaderById(readerId,out message);
                 }
                 else if (ch == 2)
                 {
